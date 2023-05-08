@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Dark Mode Switcher",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Uma extensão para alternar entre o modo escuro e o modo claro.",
   "browser_action": {
     "default_icon": "icon.png",

@@ -14,7 +14,13 @@ toggleButton.addEventListener("click", () => {
   });
 
   chrome.storage.sync.get("darkMode", ({ darkMode }) => {
-    chrome.storage.sync.set({ darkMode: !darkMode });
+    chrome.storage.sync.set({ darkMode: !darkMode }, () => {
+      if (!darkMode) {
+        alert("Mudou para o modo escuro");
+      } else {
+        alert("Mudou para o modo claro");
+      }
+    });
   });
 });
 
@@ -33,3 +39,5 @@ chrome.storage.sync.get("darkMode", ({ darkMode }) => {
     document.body.classList.remove("dark-mode");
   }
 });
+
+
